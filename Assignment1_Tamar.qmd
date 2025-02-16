@@ -49,6 +49,7 @@ avengers_clean <- avengers_clean %>%
 
 # Check the first few rows to confirm the new variable
 head(avengers_clean)
+view(avengers_clean)
 
 # Summary statistics for Combat Effectiveness
 combat_stats <- avengers_clean %>%
