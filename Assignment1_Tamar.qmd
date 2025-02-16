@@ -154,6 +154,18 @@ print(battlefield_summary)
 
 -   Kills is the most erroneous variable because it has a very high standard deviation compared to the mean, it has extreme values (e.g., some with 0 kills, others with 79 kills), and it is highly skewed, meaning the mean does not represent most Avengers well.
 
+```{r}
+combat_variability <- avengers_no_superpower_dead %>%
+  summarise(
+    SD_Combat = sd(CombatEffectiveness, na.rm = TRUE),
+    SD_Kills = sd(kills, na.rm = TRUE),
+    SD_Injuries = sd(injuries, na.rm = TRUE)
+  )
+
+combat_variability  # View the SDs
+
+```
+
 ## Question 6:
 
 Justification 1: Use prior literature/conventions
